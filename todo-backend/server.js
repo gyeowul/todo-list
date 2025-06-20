@@ -42,7 +42,6 @@ app.post('/todos', (req, res) => {
             res.status(500).json({ error: err.message });
             return;
         }
-
         res.status(201).json({ id: this.lastID, text, completed: 0 });
     });
 });
@@ -83,5 +82,5 @@ app.delete('/todos/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log('Server running on port ${PORT}');
+    console.log(`Server running on port ${PORT}`);
 })
